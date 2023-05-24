@@ -37,7 +37,7 @@ startButton.addEventListener('click', () => {
         localStorage.setItem('hours', hours.toString());
         localStorage.setItem('minutes', minutes.toString());
         localStorage.setItem('seconds', seconds.toString());
-        timer((hours * 3600) + (minutes * 60) + seconds);
+        timer(hours * 3600 + minutes * 60 + seconds);
     }
     else {
         alert('Please enter valid time!');
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('selectedTheme', this.value);
     });
     // Load the saved theme from local storage (if any)
-    var savedTheme = localStorage.getItem('selectedTheme');
+    let savedTheme = localStorage.getItem('selectedTheme');
     if (savedTheme) {
         // Remove the current theme from the body
         document.body.classList.remove('theme-default', 'theme-dark');
