@@ -1,5 +1,4 @@
 "use strict";
-// Query DOM elements and assign their correct types
 const hoursInput = document.querySelector('#hours-input');
 const minutesInput = document.querySelector('#minutes-input');
 const secondsInput = document.querySelector('#seconds-input');
@@ -75,21 +74,14 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', function () {
     let themeSelector = document.getElementById('theme-selector');
     themeSelector.addEventListener('change', function () {
-        // Remove the existing theme class from the body
         document.body.classList.remove('theme-default', 'theme-dark');
-        // Add the selected theme class to the body
         document.body.classList.add(this.value);
-        // Save the selected theme in local storage
         localStorage.setItem('selectedTheme', this.value);
     });
-    // Load the saved theme from local storage (if any)
     let savedTheme = localStorage.getItem('selectedTheme');
     if (savedTheme) {
-        // Remove the current theme from the body
         document.body.classList.remove('theme-default', 'theme-dark');
-        // Add the saved theme class to the body
         document.body.classList.add(savedTheme);
-        // Set the dropdown menu's value to the saved theme
         themeSelector.value = savedTheme;
     }
 });
