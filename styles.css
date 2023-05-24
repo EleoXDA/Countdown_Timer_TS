@@ -1,0 +1,165 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  #app {
+    width: 80%;
+    box-sizing: border-box;
+  }
+}
+
+
+h1 {
+  color: #2f3640;
+  margin-bottom: 30px;
+}
+
+#input-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+#input-container div {
+  flex: 1;
+}
+
+input {
+  border: 2px solid #2f3640;
+  border-radius: 5px;
+  height: 30px;
+  width: 60px;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+#start-btn, #reset-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-btn {
+  background-color: #2f3640;
+  color: white;
+}
+
+#start-btn:hover {
+  background-color: #576574;
+}
+
+#reset-btn {
+  background-color: #ffffff;
+  color: #2f3640;
+  border: 2px solid #2f3640;
+}
+
+#reset-btn:hover {
+  background-color: #f0f0f0;
+}
+
+#timer-display {
+  color: #2f3640;
+  font-size: 2em;
+  margin-top: 20px;
+  border: 2px solid #2f3640;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.theme-selector-container {
+  position:absolute;
+  text-align:center;
+  top: 90px;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 5px;
+  z-index: 10;
+  background-color: #fff;
+  color: #000;
+}
+
+.theme-selector-container select {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #000;
+}
+
+.theme-default {
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+.theme-default #app {
+  background: #ffffff;
+  color: #000;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.theme-default button:hover {
+  background-color: #007B9A; /* Darker blue */
+}
+
+.theme-dark, .theme-dark .theme-selector-container, .theme-dark .theme-selector-container select, .theme-dark .theme-selector-container option, .theme-dark #hours-input, .theme-dark #minutes-input, .theme-dark #seconds-input {
+  background-color: #000;
+  color: #fff;
+}
+
+.theme-dark #app, .theme-dark #timer-display {
+  background: #111;
+  color: #fff;
+  box-shadow: 0px 0px 10px 2px #555;
+}
+
+.theme-dark h1 {
+  color: #fff;
+}
+
+.theme-dark #start-btn {
+  background-color: rgb(32, 121, 32);
+  color: #fff;
+}
+
+.theme-dark #start-btn:hover {
+  background-color: rgb(21, 80, 21);
+}
+
+.theme-dark #reset-btn:hover {
+  background-color: #000000; /* Darker blue */
+}
+
+.theme-dark #reset-btn {
+  background-color: #5c5c5c; /* Darker blue */
+  color: white;
+}
+
+.theme-dark button:hover {
+  background-color: #004461; /* Even darker blue */
+}

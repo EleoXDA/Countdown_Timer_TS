@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <h1>Countdown Timer</h1>
+        <div id="input-container">
+            <div>
+                <label for="hours-input">Hours</label><br>
+                <input type="number" id="hours-input" min="0" placeholder="0">
+            </div>
+            <div>
+                <label for="minutes-input">Minutes</label><br>
+                <input type="number" id="minutes-input" min="0" placeholder="0">
+            </div>
+            <div>
+                <label for="seconds-input">Seconds</label><br>
+                <input type="number" id="seconds-input" min="0" placeholder="0">
+            </div>
+        </div>
+        <div id="button-container">
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <h2 id="timer-display">00:00:00</h2>
+    </div>
+    <div class="theme-selector-container center">
+      <label for="theme-selector">Choose a theme:</label>
+      <select id="theme-selector">
+        <option value="theme-default">Light</option>
+        <option value="theme-dark">Dark</option>
+      </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
