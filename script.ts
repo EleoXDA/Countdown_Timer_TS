@@ -29,6 +29,7 @@ function timer(seconds: number): void {
         // Stop countdown and alert when time is up
         if (secondsLeft < 0) {
             clearInterval(countdown);
+            countdown = 0;
             alert('Timer Finished!');
             localStorage.removeItem('endTime');
             return;
@@ -57,6 +58,11 @@ function displayTimeLeft(seconds: number): void {
 
 // Event listener for start button
 startButton!.addEventListener('click', () => {
+    // If countdown is already running, return
+    if (countdown != 0) {
+        return;
+    }
+
     // Parse time input values
     const hours = parseInt(hoursInput!.value) || 0;
     const minutes = parseInt(minutesInput!.value) || 0;
@@ -85,6 +91,7 @@ resetButton!.addEventListener('click', () => {
     timerDisplay!.textContent = '00:00:00';
     // Clear countdown
     clearInterval(countdown);
+    countdown = 0;
     // Remove saved time input values and end time from localStorage
     localStorage.removeItem('endTime');
     localStorage.removeItem('hours');
