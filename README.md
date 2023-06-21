@@ -1,4 +1,4 @@
-# Persistent Countdown Timer
+# Countdown Timer
 
 ![image](https://github.com/EleoXDA/Countdown_Timer_JS/assets/27622683/b0b388d8-5789-47b4-aa3d-ba7b91e58f1f)
 
